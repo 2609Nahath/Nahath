@@ -1,0 +1,19 @@
+.nav{
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-left:-20px;
+    margin-right: -20px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 184, 123);
+}
+
+.nav li{
+    display: inline;
+    margin-left: 130px;
+}
+
+.nav li:hover{
+    color: rgb(0, 80, 54);
+}
+
