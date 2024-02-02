@@ -39,10 +39,10 @@ class _SingleInProcessItemState extends State<SingleInProcessItem> {
   ];
   var roleOfMember = [
     'Frontend/Backend Dev.',
-    'Fronend/Backend Dev.',
-    'Fronend/Backend Dev.',
-    'Fronend/Backend Dev.',
-    'Fronend/Backend Dev.'
+    'Frontend/Backend Dev.',
+    'Frontend/Backend Dev.',
+    'Frontend/Backend Dev.',
+    'Frontend/Backend Dev.'
   ];
 
   final ScrollController _scrollController = ScrollController();
