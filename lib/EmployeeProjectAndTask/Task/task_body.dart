@@ -1,10 +1,12 @@
 import 'dart:math';
 
-import 'package:emp_management_system/EmployeeProjectAndTask/Project/completed_item.dart';
+import 'package:emp_management_system/EmployeeProjectAndTask/Project/Completed%20Projects/completed_item.dart';
+import 'package:emp_management_system/EmployeeProjectAndTask/Task/Completed_Task/completed_task.dart';
+import 'package:emp_management_system/EmployeeProjectAndTask/Task/InProgress_Task/in_progress_task.dart';
 import 'package:emp_management_system/EmployeeProjectAndTask/Task/add_task.dart';
 import 'package:flutter/material.dart';
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
-import 'package:emp_management_system/EmployeeProjectAndTask/Project/in_process-item.dart';
+import 'package:emp_management_system/EmployeeProjectAndTask/Project/InProgress%20Projects/in_process-item.dart';
 
 class TaskBody {
   var TaskArr = ['Task 1', 'Task 2', 'Task 3', 'Task 4'];
@@ -39,7 +41,7 @@ class TaskBody {
           ),
           Column(
             children: List.generate(itemCount, (position) {
-              return InProcessItems(
+              return ShowInProgressTask_Items(
                   title: TaskArr[position],
                   tileColor: tileColors,
                   description: "01/02/2023",
@@ -63,7 +65,7 @@ class TaskBody {
           ),
           Column(
             children: List.generate(itemCount, (position) {
-              return CompletedItems(
+              return ShowCompletedTask_Items(
                   title: TaskArr[position],
                   tileColor: tileColors,
                   description: "01/02/2023",

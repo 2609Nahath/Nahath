@@ -1,15 +1,15 @@
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
-import 'package:emp_management_system/EmployeeProjectAndTask/Project/single_in_process_item.dart';
+import 'package:emp_management_system/EmployeeProjectAndTask/Project/InProgress%20Projects/single_in_process_item.dart';
 import 'package:flutter/material.dart';
-import '../../CircularImage/CircularImageProfile.dart';
+import '../../../CircularImage/CircularImageProfile.dart';
 
-class InProcessItems extends StatefulWidget {
+class InProcessItem_InProcess extends StatefulWidget {
   final String title;
   final String description;
   final Color descriptionColor;
   final Color tileColor;
 
-  const InProcessItems(
+  const InProcessItem_InProcess(
       {super.key,
       required this.title,
       required this.tileColor,
@@ -17,10 +17,11 @@ class InProcessItems extends StatefulWidget {
       required this.descriptionColor});
   @override
   // ignore: library_private_types_in_public_api
-  _InProcessItemsState createState() => _InProcessItemsState();
+  _InProcessItem_InProcessState createState() =>
+      _InProcessItem_InProcessState();
 }
 
-class _InProcessItemsState extends State<InProcessItems> {
+class _InProcessItem_InProcessState extends State<InProcessItem_InProcess> {
   bool expanded = false;
 
   @override

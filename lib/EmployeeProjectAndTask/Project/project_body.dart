@@ -1,8 +1,8 @@
 import 'package:emp_management_system/EmployeeProjectAndTask/Project/view_in_progress_projects.dart';
-import 'package:emp_management_system/EmployeeProjectAndTask/Project/completed_item.dart';
+import 'package:emp_management_system/EmployeeProjectAndTask/Project/Completed%20Projects/completed_item.dart';
 import 'package:flutter/material.dart';
 import '../../Colors_Fonts/Fonts/font.dart';
-import 'in_process-item.dart';
+import 'InProgress Projects/in_process-item.dart';
 import 'dart:math'; // Added import for dart:math
 
 class ProjectBody {
@@ -98,7 +98,7 @@ class ProjectBody {
             ),
             Column(
               children: List.generate(itemCount, (position) {
-                return InProcessItems(
+                return InProcessItem_InProcess(
                   title: inProgressProjectArr[position],
                   tileColor: tileColors,
                   description: dueDateArray[position],
@@ -116,7 +116,13 @@ class ProjectBody {
                 ),
                 TextButton(
                   onPressed: () {
-                    // ... (your button onPressed logic)
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            ViewInProgressProjects(completedProjectArr),
+                      ),
+                    );
                   },
                   style: ButtonStyle(
                     overlayColor: MaterialStateProperty.resolveWith<Color>(

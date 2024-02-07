@@ -1,13 +1,16 @@
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
+import 'package:emp_management_system/EmployeeProjectAndTask/Project/InProgress%20Projects/single_in_process_item.dart';
+import 'package:emp_management_system/EmployeeProjectAndTask/Task/InProgress_Task/single_in_progress_task.dart';
 import 'package:flutter/material.dart';
+import '../../../CircularImage/CircularImageProfile.dart';
 
-class CompletedItems extends StatefulWidget {
+class ShowCompletedTask_Items extends StatefulWidget {
   final String title;
   final String description;
   final Color descriptionColor;
   final Color tileColor;
 
-  const CompletedItems(
+  const ShowCompletedTask_Items(
       {super.key,
       required this.title,
       required this.tileColor,
@@ -15,10 +18,11 @@ class CompletedItems extends StatefulWidget {
       required this.descriptionColor});
   @override
   // ignore: library_private_types_in_public_api
-  _CompletedItemsState createState() => _CompletedItemsState();
+  _ShowCompletedTask_ItemsState createState() =>
+      _ShowCompletedTask_ItemsState();
 }
 
-class _CompletedItemsState extends State<CompletedItems> {
+class _ShowCompletedTask_ItemsState extends State<ShowCompletedTask_Items> {
   bool expanded = false;
 
   @override
@@ -28,7 +32,7 @@ class _CompletedItemsState extends State<CompletedItems> {
         child: SizedBox(
             height: 150,
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(20.0),
+              borderRadius: BorderRadius.circular(25.0),
               child: Card(
                 child: Scaffold(
                   backgroundColor: widget.descriptionColor,
@@ -54,11 +58,20 @@ class _CompletedItemsState extends State<CompletedItems> {
                               top: 0,
                               right: 0,
                               child: Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 0, 5, 0),
+                                padding: const EdgeInsets.fromLTRB(0, 3, 10, 0),
                                 child: Align(
                                   alignment: Alignment.topRight,
                                   child: IconButton(
-                                      onPressed: () => {},
+                                      onPressed: () => {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        SingleInProcessTask_Item(
+                                                            widget.title,
+                                                            widget
+                                                                .description)))
+                                          },
                                       hoverColor: Colors.transparent,
                                       icon:
                                           const Icon(Icons.arrow_forward_ios)),
@@ -73,7 +86,7 @@ class _CompletedItemsState extends State<CompletedItems> {
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: Text(
-                            "Completed Date",
+                            "Due date",
                             style: Fonts.smallFonts,
                           ),
                         ),
@@ -83,13 +96,12 @@ class _CompletedItemsState extends State<CompletedItems> {
                           const Padding(
                             padding: EdgeInsets.all(10),
                             child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Icon(Icons.calendar_month)),
+                              alignment: Alignment.topLeft,
+                              child: Icon(Icons.calendar_month),
+                            ),
                           ),
-                          Text(
-                            widget.description,
-                            style: Fonts.smallFonts,
-                          )
+                          Text(widget.description, style: Fonts.smallFonts),
+                          Spacer(), // Add Spacer widget to take available space
                         ],
                       )
                     ],

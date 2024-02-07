@@ -7,9 +7,17 @@ class Fonts extends StatefulWidget {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
+  static TextStyle google_fonts_bold_big = GoogleFonts.poppins(
+      fontSize: 20, fontWeight: FontWeight.w600, color: Colors.black);
   // ignore: non_constant_identifier_names
   static TextStyle google_fonts = GoogleFonts.poppins(
       fontSize: 20, fontWeight: FontWeight.w400, color: Colors.black);
+
+  static TextStyle google_fonts_small = GoogleFonts.poppins(
+      fontSize: 17, fontWeight: FontWeight.w400, color: Colors.black);
+
+  static TextStyle google_fonts_small_white = GoogleFonts.poppins(
+      fontSize: 17, fontWeight: FontWeight.w400, color: Colors.white);
 
   static TextStyle bodyFonts = GoogleFonts.poppins(
       fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black);

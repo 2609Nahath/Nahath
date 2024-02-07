@@ -3,7 +3,7 @@ import 'package:emp_management_system/EmployeeProjectAndTask/AppBar.dart';
 import 'package:flutter/material.dart';
 
 import '../drawer_button.dart';
-import 'in_process-item.dart';
+import 'InProgress Projects/in_process-item.dart';
 
 class ViewInProgressProjects extends StatefulWidget {
   final List<String> inProgressProjects;
@@ -60,7 +60,7 @@ class _ViewInProgressProjectsState extends State<ViewInProgressProjects> {
                             shrinkWrap: true,
                             itemCount: 6,
                             itemBuilder: (context, position) {
-                              return InProcessItems(
+                              return InProcessItem_InProcess(
                                 title: widget.inProgressProjects[position],
                                 tileColor:
                                     const Color.fromRGBO(218, 217, 217, 0.408),

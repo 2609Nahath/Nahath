@@ -1,39 +1,41 @@
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
+import 'package:emp_management_system/EmployeeProjectAndTask/Project/InProgress%20Projects/single_in_process_item.dart';
+import 'package:emp_management_system/EmployeeProjectAndTask/Task/InProgress_Task/single_in_progress_task.dart';
 import 'package:flutter/material.dart';
-import '../../CircularImage/CircularImageProfile.dart';
+import '../../../CircularImage/CircularImageProfile.dart';
 
-class ProjecttaskItems extends StatefulWidget {
+class ShowInProgressTask_Items extends StatefulWidget {
   final String title;
-  final String dueDate;
-  final Color dueDateColor;
+  final String description;
+  final Color descriptionColor;
   final Color tileColor;
 
-  const ProjecttaskItems(
+  const ShowInProgressTask_Items(
       {super.key,
       required this.title,
       required this.tileColor,
-      required this.dueDate,
-      required this.dueDateColor});
+      required this.description,
+      required this.descriptionColor});
   @override
   // ignore: library_private_types_in_public_api
-  _ProjecttaskItemsState createState() => _ProjecttaskItemsState();
+  _ShowInProgressTask_ItemsState createState() =>
+      _ShowInProgressTask_ItemsState();
 }
 
-class _ProjecttaskItemsState extends State<ProjecttaskItems> {
+class _ShowInProgressTask_ItemsState extends State<ShowInProgressTask_Items> {
   bool expanded = false;
-  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: SizedBox(
             height: 150,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(25.0),
               child: Card(
                 child: Scaffold(
-                  backgroundColor: widget.dueDateColor,
+                  backgroundColor: widget.descriptionColor,
                   body: Column(
                     children: [
                       Container(
@@ -58,17 +60,22 @@ class _ProjecttaskItemsState extends State<ProjecttaskItems> {
                               child: Padding(
                                 padding: const EdgeInsets.fromLTRB(0, 3, 10, 0),
                                 child: Align(
-                                    alignment: Alignment.topRight,
-                                    child: Checkbox(
-                                      value: isChecked,
-                                      onChanged: (bool? value) {
-                                        setState(() {
-                                          isChecked = value ?? false;
-                                        });
-                                      },
-                                      checkColor: Colors.white,
-                                      activeColor: Colors.black,
-                                    )),
+                                  alignment: Alignment.topRight,
+                                  child: IconButton(
+                                      onPressed: () => {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        SingleInProcessTask_Item(
+                                                            widget.title,
+                                                            widget
+                                                                .description)))
+                                          },
+                                      hoverColor: Colors.transparent,
+                                      icon:
+                                          const Icon(Icons.arrow_forward_ios)),
+                                ),
                               ),
                             ),
                           ],
@@ -93,7 +100,8 @@ class _ProjecttaskItemsState extends State<ProjecttaskItems> {
                               child: Icon(Icons.calendar_month),
                             ),
                           ),
-                          Text(widget.dueDate, style: Fonts.smallFonts),
+                          Text(widget.description, style: Fonts.smallFonts),
+                          Spacer(), // Add Spacer widget to take available space
                         ],
                       )
                     ],
