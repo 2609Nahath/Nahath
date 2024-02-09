@@ -7,7 +7,6 @@ import 'package:emp_management_system/Colors_Fonts/mainColors/mainColors.dart';
 import 'package:emp_management_system/EmployeeProjectAndTask/AppBar.dart';
 import 'package:emp_management_system/EmployeeProjectAndTask/Project/show_material.dart';
 import 'package:emp_management_system/EmployeeProjectAndTask/Project/show_meetings.dart';
-import 'package:emp_management_system/EmployeeProjectAndTask/Project/InProgress%20Projects/show_project_task_in_progress.dart';
 import 'package:emp_management_system/EmployeeProjectAndTask/TeamMembers/team_member.dart';
 
 class SingleCompletedItem extends StatefulWidget {

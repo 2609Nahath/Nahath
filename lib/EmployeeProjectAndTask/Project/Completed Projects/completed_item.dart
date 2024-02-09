@@ -1,7 +1,6 @@
 import 'package:emp_management_system/CircularImage/CircularImageProfile.dart';
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
 import 'package:emp_management_system/EmployeeProjectAndTask/Project/Completed%20Projects/single_completed_item.dart';
-import 'package:emp_management_system/EmployeeProjectAndTask/Project/InProgress%20Projects/single_in_process_item.dart';
 import 'package:flutter/material.dart';
 
 class CompletedItems extends StatefulWidget {

@@ -1,8 +1,6 @@
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
-import 'package:emp_management_system/EmployeeProjectAndTask/Project/InProgress%20Projects/single_in_process_item.dart';
 import 'package:emp_management_system/EmployeeProjectAndTask/Task/InProgress_Task/single_in_progress_task.dart';
 import 'package:flutter/material.dart';
-import '../../../CircularImage/CircularImageProfile.dart';
 
 class ShowInProgressTask_Items extends StatefulWidget {
   final String title;
