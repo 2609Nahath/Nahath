@@ -103,12 +103,12 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                               child: Container(
                                 color: MainColors.offWhiteWithOpacity,
                                 child: Padding(
-                                  padding: EdgeInsets.only(
+                                  padding: const EdgeInsets.only(
                                       bottom: 10, right: 20, left: 20),
                                   child: Column(
                                     children: [
                                       Padding(
-                                        padding: EdgeInsets.only(top: 10),
+                                        padding: EdgeInsets.only(top: 20),
                                         child: Align(
                                           alignment: Alignment.topLeft,
                                           child: Text(
@@ -119,7 +119,7 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsets.only(top: 10),
+                                        padding: EdgeInsets.only(top: 20),
                                         child: Align(
                                           alignment: Alignment.topLeft,
                                           child: Text(
@@ -129,29 +129,75 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                           ),
                                         ),
                                       ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(top: 30),
+                                        child: Divider(
+                                          color: Colors.black,
+                                          thickness:
+                                              .8, // Adjust the thickness as needed
+                                          indent:
+                                              1.0, // Adjust the left indent as needed
+                                          endIndent:
+                                              1.0, // Adjust the right indent as needed
+                                        ),
+                                      ),
                                       Padding(
-                                        padding: EdgeInsets.only(
-                                            top: 20, bottom: 20),
+                                        padding: EdgeInsets.only(top: 30),
                                         child: Align(
-                                            alignment: Alignment.topLeft,
-                                            child: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(25),
-                                              child: Container(
-                                                color: MainColors.offWhite,
-                                                child: TextField(
-                                                  maxLines: 6,
+                                          alignment: Alignment.topLeft,
+                                          child: Text(
+                                            "Progress Tracker",
+                                            style: Fonts.google_fonts_bold_big,
+                                            textAlign: TextAlign.justify,
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(top: 20),
+                                        child: Align(
+                                            alignment: Alignment.center,
+                                            child: Container(
+                                              color: MainColors.firstColor,
+                                              child: IconButton(
+                                                onPressed: () => {},
+                                                icon: Icon(
+                                                  Icons.add_rounded,                                                
+                                                  color: MainColors.offWhite,
                                                 ),
                                               ),
                                             )),
-                                      )
+                                      ),
+                                      Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 50, bottom: 20),
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(25),
+                                            child: Align(
+                                                alignment: Alignment.topLeft,
+                                                child: Container(
+                                                  color: MainColors.offWhite,
+                                                  child: TextField(
+                                                    maxLines: 6,
+                                                    decoration: InputDecoration(
+                                                      hintText:
+                                                          "Leave a remark...",
+                                                      hintStyle:
+                                                          Fonts.bodyFonts,
+                                                      contentPadding:
+                                                          const EdgeInsets.all(
+                                                              15),
+                                                    ),
+                                                  ),
+                                                )),
+                                          )),
                                     ],
                                   ),
                                 ),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(top: 10),
+                              padding: const EdgeInsets.only(top: 20),
                               child: ElevatedButton(
                                 onPressed: () => {},
                                 child: Text(

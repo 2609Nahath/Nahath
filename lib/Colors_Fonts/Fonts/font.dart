@@ -8,7 +8,7 @@ class Fonts extends StatefulWidget {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
   static TextStyle google_fonts_bold_big = GoogleFonts.poppins(
-      fontSize: 20, fontWeight: FontWeight.w600, color: Colors.black);
+      fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black);
   // ignore: non_constant_identifier_names
   static TextStyle google_fonts = GoogleFonts.poppins(
       fontSize: 20, fontWeight: FontWeight.w400, color: Colors.black);
