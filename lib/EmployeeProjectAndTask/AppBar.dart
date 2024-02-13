@@ -6,34 +6,43 @@ class HomeAppBar {
     backgroundColor: Colors.white,
     title: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment:
+          CrossAxisAlignment.center, // Center the row vertically
       children: [
         Align(
-          alignment: Alignment.center,
+            alignment: Alignment.topLeft,
+            child: Container(
+              width: 80,
+              color: Colors.white,
+            )),
+        Center(
           child: Text(
             'PrayagEdu',
             style: GoogleFonts.poppins(
-                color: Colors.black,
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
-                shadows: <Shadow>[
-                  const Shadow(
-                    offset: Offset(5.0, 5.0),
-                    blurRadius: 4.0,
-                    color: Colors.grey,
-                  )
-                ]),
+              color: Colors.black,
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              shadows: <Shadow>[
+                const Shadow(
+                  offset: Offset(5.0, 5.0),
+                  blurRadius: 4.0,
+                  color: Colors.grey,
+                )
+              ],
+            ),
           ),
         ),
         Align(
-            alignment: Alignment.topRight,
-            child: IconButton(
-              onPressed: () => {},
-              icon: const Icon(Icons.notifications),
-            ))
+          alignment: Alignment.topRight,
+          child: IconButton(
+            onPressed: () => {}, // Add your onPressed logic
+            icon: const Icon(Icons.notifications),
+          ),
+        ),
       ],
     ),
     iconTheme: const IconThemeData(color: Colors.black),
-    centerTitle: true,
+    centerTitle: false, // Set to false to allow manual centering
     elevation: 0,
   );
 }
