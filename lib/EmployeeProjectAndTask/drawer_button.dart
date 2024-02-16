@@ -1,10 +1,11 @@
 // Hamburger.dart
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
+import 'package:emp_management_system/EmployeeProjectAndTask/settings.dart';
 import 'package:flutter/material.dart';
 
 class HamburgerButton {
   // Hamburger.dart
-  static Drawer buildDrawer() {
+  static Drawer buildDrawer(BuildContext context) {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -23,8 +24,10 @@ class HamburgerButton {
           ListTile(
             title: Text('Settings', style: Fonts.bodyFonts),
             onTap: () {
-              // Update the state of the app.
-              // ...
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Settings()),
+              );
             },
           ),
           ListTile(
@@ -33,7 +36,10 @@ class HamburgerButton {
               style: Fonts.bodyFonts,
             ),
             onTap: () {
-              // ...
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Settings()),
+              );
             },
           ),
           ListTile(

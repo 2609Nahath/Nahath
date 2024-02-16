@@ -13,7 +13,7 @@ class Chatting extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      endDrawer: HamburgerButton.buildDrawer(),
+      endDrawer: HamburgerButton.buildDrawer(context),
       appBar: HomeAppBar().appBar,
       body: ChattingBody(),
     );

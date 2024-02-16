@@ -18,7 +18,7 @@ class _HomeProjectTaskState extends State<HomeProjectTask> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      endDrawer: HamburgerButton.buildDrawer(),
+      endDrawer: HamburgerButton.buildDrawer(context),
       appBar: homeAppBar.appBar,
       body: const ProjectTask(),
     );

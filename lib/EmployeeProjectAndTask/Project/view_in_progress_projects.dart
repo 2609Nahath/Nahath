@@ -35,7 +35,7 @@ class _ViewInProgressProjectsState extends State<ViewInProgressProjects> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        endDrawer: HamburgerButton.buildDrawer(),
+        endDrawer: HamburgerButton.buildDrawer(context),
         appBar: homeAppBar.appBar,
         body: Scrollbar(
           child: ListView(
