@@ -1,5 +1,6 @@
 import 'package:emp_management_system/CircularImage/CircularImageProfile.dart';
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
+import 'package:emp_management_system/EmployeeProjectAndTask/Project/Messaging/chat.dart';
 import 'package:emp_management_system/Ratings/personal_rating.dart';
 import 'package:flutter/material.dart';
 
@@ -21,18 +22,18 @@ class TeamMember extends StatelessWidget {
       borderRadius: BorderRadius.circular(25),
       child: Container(
         height: 50,
-        padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
         color: tileColor,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-                padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
-                child: Center(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
+                child: const Center(
                   child: CircularImageProfile(),
                 )),
             Padding(
-                padding: EdgeInsets.only(bottom: 10),
+                padding: const EdgeInsets.only(bottom: 10),
                 child: Center(
                   child: Text(
                     nameOfMember,
@@ -55,8 +56,11 @@ class TeamMember extends StatelessWidget {
             Align(
               alignment: Alignment.bottomRight,
               child: IconButton(
-                onPressed: () => {},
-                icon: Icon(
+                onPressed: () => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Chatting()))
+                },
+                icon: const Icon(
                   Icons.chat_bubble_outline,
                   color: Colors.black,
                 ),

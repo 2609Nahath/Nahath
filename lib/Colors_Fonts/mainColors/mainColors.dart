@@ -6,4 +6,5 @@ class MainColors {
   static Color thirdColor = const Color.fromARGB(204, 57, 163, 156);
   static Color offWhite = Color.fromARGB(255, 232, 255, 253);
   static Color offWhiteWithOpacity = Color.fromRGBO(254, 255, 255, 0.555);
+  static Color mainColor = Color.fromARGB(255, 1, 189, 178);
 }

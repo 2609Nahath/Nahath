@@ -9,12 +9,6 @@ class HomeAppBar {
       crossAxisAlignment:
           CrossAxisAlignment.center, // Center the row vertically
       children: [
-        Align(
-            alignment: Alignment.topLeft,
-            child: Container(
-              width: 80,
-              color: Colors.white,
-            )),
         Center(
           child: Text(
             'PrayagEdu',
