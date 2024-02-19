@@ -192,8 +192,9 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                                   ),
                                                   style:
                                                       ElevatedButton.styleFrom(
-                                                          primary: MainColors
-                                                              .offWhite),
+                                                          backgroundColor:
+                                                              MainColors
+                                                                  .offWhite),
                                                 ),
                                               )
                                             ],

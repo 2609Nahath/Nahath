@@ -33,7 +33,8 @@ class _ProjectTaskState extends State<ProjectTask> {
                   child: ElevatedButton(
                     onPressed: () => _toggleBody(true, false),
                     style: ElevatedButton.styleFrom(
-                      primary: _showProjectBody ? enableColor : disableColor,
+                      backgroundColor:
+                          _showProjectBody ? enableColor : disableColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(0.0),
                       ),
@@ -51,7 +52,8 @@ class _ProjectTaskState extends State<ProjectTask> {
                   child: ElevatedButton(
                     onPressed: () => _toggleBody(false, true),
                     style: ElevatedButton.styleFrom(
-                      primary: _showProjectBody ? disableColor : enableColor,
+                      backgroundColor:
+                          _showProjectBody ? disableColor : enableColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(0.0),
                       ),
