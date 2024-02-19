@@ -1,6 +1,7 @@
 // Hamburger.dart
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
-import 'package:emp_management_system/EmployeeProjectAndTask/settings.dart';
+import 'package:emp_management_system/Dashboard/FAQ/faq.dart';
+import 'package:emp_management_system/Dashboard/Settings/settings.dart';
 import 'package:flutter/material.dart';
 
 class HamburgerButton {
@@ -38,7 +39,7 @@ class HamburgerButton {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Settings()),
+                MaterialPageRoute(builder: (context) => const FAQ()),
               );
             },
           ),
