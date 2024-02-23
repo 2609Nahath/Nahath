@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class tileColour {
   static Color tileColors = Color.fromRGBO(255, 255, 255, 0.4);
+
   static List<Color> dueDateBgColor = [
     Color.fromARGB(204, 134, 224, 201),
     const Color.fromRGBO(104, 180, 175, 0.698),

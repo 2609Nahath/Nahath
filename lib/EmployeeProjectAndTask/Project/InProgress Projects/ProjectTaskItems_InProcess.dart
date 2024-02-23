@@ -48,7 +48,7 @@ class _ProjecttaskItems_InProcessState
                                   child: Align(
                                     alignment: Alignment.topLeft,
                                     child: Text(widget.title,
-                                        style: Fonts.bodyFonts),
+                                        style: Fonts.bodyFonts(context)),
                                   ),
                                 ),
                               ],
@@ -81,7 +81,7 @@ class _ProjecttaskItems_InProcessState
                           alignment: Alignment.topLeft,
                           child: Text(
                             "Due date",
-                            style: Fonts.smallFonts,
+                            style: Fonts.smallFonts(context),
                           ),
                         ),
                       ),
@@ -94,7 +94,8 @@ class _ProjecttaskItems_InProcessState
                               child: Icon(Icons.calendar_month),
                             ),
                           ),
-                          Text(widget.dueDate, style: Fonts.smallFonts),
+                          Text(widget.dueDate,
+                              style: Fonts.smallFonts(context)),
                         ],
                       )
                     ],

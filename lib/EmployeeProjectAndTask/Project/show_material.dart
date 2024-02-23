@@ -37,7 +37,7 @@ class ShowMaterial {
       children: [
         Text(
           "No materials ",
-          style: Fonts.bodyFonts,
+          style: Fonts.bodyFonts(context),
         )
       ],
     );

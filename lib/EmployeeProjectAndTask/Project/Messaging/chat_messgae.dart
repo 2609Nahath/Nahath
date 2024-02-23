@@ -21,7 +21,7 @@ class ChatMessage extends StatelessWidget {
               : const Color.fromARGB(255, 209, 209, 209),
           borderRadius: BorderRadius.circular(10),
         ),
-        child: Text(message, style: Fonts.bodyFonts),
+        child: Text(message, style: Fonts.bodyFonts(context)),
       ),
     );
   }

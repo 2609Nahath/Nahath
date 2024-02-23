@@ -45,7 +45,7 @@ class _MeetingsState extends State<Meetings> {
                               alignment: Alignment.topLeft,
                               child: Text(
                                 widget.meetingName,
-                                style: Fonts.bodyFonts,
+                                style: Fonts.bodyFonts(context),
                               )),
                         ),
                         Padding(
@@ -60,7 +60,7 @@ class _MeetingsState extends State<Meetings> {
                                   ),
                                   Text(
                                     " ${widget.meetingDate}",
-                                    style: Fonts.smallFonts,
+                                    style: Fonts.smallFonts(context),
                                   )
                                 ],
                               )),
@@ -84,7 +84,7 @@ class _MeetingsState extends State<Meetings> {
                                     ),
                                     Text(
                                       " ${widget.meetingTime}",
-                                      style: Fonts.smallFonts,
+                                      style: Fonts.smallFonts(context),
                                     ),
                                   ],
                                 )),
@@ -103,7 +103,7 @@ class _MeetingsState extends State<Meetings> {
                                         padding: EdgeInsets.only(bottom: 10),
                                         child: Text(
                                           " Example.pdf ",
-                                          style: Fonts.smallFonts,
+                                          style: Fonts.smallFonts(context),
                                         ),
                                       ),
                                       const Icon(Icons.picture_as_pdf_sharp)

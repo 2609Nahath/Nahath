@@ -43,6 +43,7 @@ class ProjectBody {
   Widget buildProjectBody(BuildContext context) {
     final int itemCount = min(inProgressProjectArr.length, 3);
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Scrollbar(
         child: ListView(
           children: [
@@ -51,7 +52,7 @@ class ProjectBody {
               children: [
                 Container(
                   padding: const EdgeInsets.all(20),
-                  child: Text("In Progress", style: Fonts.boldFonts),
+                  child: Text("In Progress", style: Fonts.boldFonts(context)),
                 ),
                 TextButton(
                   onPressed: () {
@@ -78,12 +79,12 @@ class ProjectBody {
                       (Set<MaterialState> states) {
                         // Set the fontWeight when the button is hovered
                         if (states.contains(MaterialState.hovered)) {
-                          return Fonts.boldFonts.copyWith(
+                          return Fonts.boldFonts(context).copyWith(
                             color: Colors.black,
                           );
                         }
                         // Default font style when not hovered
-                        return Fonts.smallFonts.copyWith(
+                        return Fonts.smallFonts(context).copyWith(
                           color: Colors.black,
                         );
                       },
@@ -92,7 +93,10 @@ class ProjectBody {
                         MaterialStateProperty.all(const EdgeInsets.all(20)),
                     foregroundColor: MaterialStateProperty.all(Colors.black),
                   ),
-                  child: const Text("View all"),
+                  child: Text(
+                    "View all",
+                    style: Fonts.smallFonts(context),
+                  ),
                 ),
               ],
             ),
@@ -112,7 +116,7 @@ class ProjectBody {
               children: [
                 Container(
                   padding: const EdgeInsets.all(20),
-                  child: Text("Completed", style: Fonts.boldFonts),
+                  child: Text("Completed", style: Fonts.boldFonts(context)),
                 ),
                 TextButton(
                   onPressed: () {
@@ -139,19 +143,22 @@ class ProjectBody {
                       (Set<MaterialState> states) {
                         // Set the fontWeight when the button is hovered
                         if (states.contains(MaterialState.hovered)) {
-                          return Fonts.boldFonts.copyWith(
+                          return Fonts.boldFonts(context).copyWith(
                             color: Colors.black,
                           );
                         }
                         // Default font style when not hovered
-                        return Fonts.smallFonts.copyWith(
+                        return Fonts.smallFonts(context).copyWith(
                           color: Colors.black,
                         );
                       },
                     ),
                     foregroundColor: MaterialStateProperty.all(Colors.black),
                   ),
-                  child: const Text("View all"),
+                  child: Text(
+                    "View all",
+                    style: Fonts.smallFonts(context),
+                  ),
                 ),
               ],
             ),

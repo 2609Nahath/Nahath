@@ -1,7 +1,7 @@
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
 import 'package:emp_management_system/Colors_Fonts/mainColors/mainColors.dart';
 import 'package:emp_management_system/EmployeeProjectAndTask/AppBar.dart';
-import 'package:emp_management_system/EmployeeProjectAndTask/drawer_button.dart';
+import 'package:emp_management_system/Dashboard/drawer_button.dart';
 import 'package:flutter/material.dart';
 
 class Settings extends StatefulWidget {
@@ -46,7 +46,7 @@ class _SettingsState extends State<Settings> {
             Center(
               child: Text(
                 'Settings',
-                style: Fonts.google_fonts_bold_big,
+                style: Fonts.google_fonts_bold_big(context),
               ),
             ),
             const SizedBox(height: 20),
@@ -63,7 +63,7 @@ class _SettingsState extends State<Settings> {
                       child: ListTile(
                         title: Text(
                           'Change Language',
-                          style: Fonts.bodyFonts,
+                          style: Fonts.bodyFonts(context),
                         ),
                         trailing: DropdownButton<String>(
                           value: selectedLanguage,
@@ -80,7 +80,7 @@ class _SettingsState extends State<Settings> {
                               value: value,
                               child: Text(
                                 value,
-                                style: Fonts.bodyFonts,
+                                style: Fonts.bodyFonts(context),
                               ),
                             );
                           }).toList(),
@@ -91,7 +91,7 @@ class _SettingsState extends State<Settings> {
                     ListTile(
                       title: Text(
                         'Dark Mode',
-                        style: Fonts.bodyFonts,
+                        style: Fonts.bodyFonts(context),
                       ),
                       trailing: Switch(
                         value: backgroundColor ==

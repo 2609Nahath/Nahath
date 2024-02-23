@@ -40,13 +40,13 @@ class _Single_QuestionState extends State<Single_Question> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(20),
-                child: Text(widget.question, style: Fonts.bodyFonts),
+                child: Text(widget.question, style: Fonts.bodyFonts(context)),
               ),
               Container(
                 color: widget.answerTileColor,
                 child: Padding(
                   padding: const EdgeInsets.all(20),
-                  child: Text(widget.answer, style: Fonts.bodyFonts),
+                  child: Text(widget.answer, style: Fonts.bodyFonts(context)),
                 ),
               )
             ],

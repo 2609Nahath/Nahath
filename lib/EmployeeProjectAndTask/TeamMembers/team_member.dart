@@ -37,14 +37,14 @@ class TeamMember extends StatelessWidget {
                 child: Center(
                   child: Text(
                     nameOfMember,
-                    style: Fonts.memberNameFonts,
+                    style: Fonts.memberNameFonts(context),
                   ),
                 )), // Assuming this widget is appropriately sized
             Padding(
               padding: const EdgeInsets.all(0),
               child: Text(
                 roleOfMember,
-                style: Fonts.memberRoleFonts,
+                style: Fonts.memberRoleFonts(context),
               ),
             ),
             const Center(

@@ -47,7 +47,7 @@ class _CompletedItemsState extends State<CompletedItems> {
                                   child: Align(
                                     alignment: Alignment.topLeft,
                                     child: Text(widget.title,
-                                        style: Fonts.bodyFonts),
+                                        style: Fonts.bodyFonts(context)),
                                   ),
                                 ),
                               ],
@@ -85,7 +85,7 @@ class _CompletedItemsState extends State<CompletedItems> {
                           alignment: Alignment.topLeft,
                           child: Text(
                             "Due date",
-                            style: Fonts.smallFonts,
+                            style: Fonts.smallFonts(context),
                           ),
                         ),
                       ),
@@ -98,7 +98,8 @@ class _CompletedItemsState extends State<CompletedItems> {
                               child: Icon(Icons.calendar_month),
                             ),
                           ),
-                          Text(widget.description, style: Fonts.smallFonts),
+                          Text(widget.description,
+                              style: Fonts.smallFonts(context)),
                           Spacer(), // Add Spacer widget to take available space
                           CircularImageProfile(),
                           CircularImageProfile(),

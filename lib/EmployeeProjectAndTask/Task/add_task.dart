@@ -34,8 +34,8 @@ class AddTask {
                       decoration: InputDecoration(
                           hintText: 'Add Task', // Hint text
                           border: const OutlineInputBorder(),
-                          hintStyle: Fonts
-                              .hintFonts // Add border for better visibility
+                          hintStyle: Fonts.hintFonts(
+                              context) // Add border for better visibility
                           ),
                     ),
                   ),
@@ -46,8 +46,8 @@ class AddTask {
                       decoration: InputDecoration(
                           hintText: 'Notes', // Hint text
                           border: const OutlineInputBorder(),
-                          hintStyle: Fonts
-                              .hintFonts // Add border for better visibility
+                          hintStyle: Fonts.hintFonts(
+                              context) // Add border for better visibility
                           ),
                     ),
                   ),
@@ -59,7 +59,8 @@ class AddTask {
                           backgroundColor: MaterialStateProperty.all<Color>(
                               const Color.fromARGB(255, 1, 189, 178)),
                         ),
-                        child: Text("Add Task", style: Fonts.bodyFonts),
+                        child:
+                            Text("Add Task", style: Fonts.bodyFonts(context)),
                       )),
                   Align(
                     alignment: Alignment.topRight,

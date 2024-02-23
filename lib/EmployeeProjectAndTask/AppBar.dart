@@ -1,9 +1,10 @@
+import 'package:emp_management_system/Themes/dark_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeAppBar {
   AppBar appBar = AppBar(
-    backgroundColor: Colors.white,
+    backgroundColor: DarkTheme().darkTheme.colorScheme.background,
     title: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment:
@@ -13,7 +14,7 @@ class HomeAppBar {
           child: Text(
             'PrayagEdu',
             style: GoogleFonts.poppins(
-              color: Colors.black,
+              color: DarkTheme().darkTheme.colorScheme.secondary,
               fontSize: 18,
               fontWeight: FontWeight.w500,
               shadows: <Shadow>[
@@ -35,7 +36,9 @@ class HomeAppBar {
         ),
       ],
     ),
-    iconTheme: const IconThemeData(color: Colors.black),
+    iconTheme: IconThemeData(
+      color: DarkTheme().darkTheme.colorScheme.secondary,
+    ),
     centerTitle: false, // Set to false to allow manual centering
     elevation: 0,
   );

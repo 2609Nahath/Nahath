@@ -39,7 +39,7 @@ class _CheckpointState extends State<Checkpoint> {
                             padding: const EdgeInsets.only(top: 20, bottom: 20),
                             child: Text(
                               widget.checkpointName,
-                              style: Fonts.smallFonts,
+                              style: Fonts.smallFonts(context),
                             ),
                           ),
                           Row(
@@ -56,7 +56,7 @@ class _CheckpointState extends State<Checkpoint> {
                                       top: 20, bottom: 20),
                                   child: Text(
                                     " ${widget.checkpointDate}",
-                                    style: Fonts.smallFonts,
+                                    style: Fonts.smallFonts(context),
                                   ))
                             ],
                           )

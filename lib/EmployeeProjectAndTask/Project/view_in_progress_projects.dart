@@ -2,7 +2,7 @@ import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
 import 'package:emp_management_system/EmployeeProjectAndTask/AppBar.dart';
 import 'package:flutter/material.dart';
 
-import '../drawer_button.dart';
+import '../../Dashboard/drawer_button.dart';
 import 'InProgress Projects/in_process-item.dart';
 
 class ViewInProgressProjects extends StatefulWidget {
@@ -45,7 +45,7 @@ class _ViewInProgressProjectsState extends State<ViewInProgressProjects> {
                 padding: const EdgeInsets.fromLTRB(20, 30, 0, 20),
                 child: Text(
                   "In Progress ",
-                  style: Fonts.headFonts,
+                  style: Fonts.headFonts(context),
                 ),
               ),
               ClipRRect(

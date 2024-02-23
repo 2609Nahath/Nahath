@@ -1,3 +1,5 @@
+import 'package:emp_management_system/Colors_Fonts/mainColors/mainColors.dart';
+import 'package:emp_management_system/Themes/dark_theme.dart';
 import 'package:flutter/material.dart';
 import '../Colors_Fonts/Fonts/font.dart';
 import 'Project/project_body.dart';
@@ -18,7 +20,7 @@ class _ProjectTaskState extends State<ProjectTask> {
   @override
   Widget build(BuildContext context) {
     Color enableColor = Color.fromARGB(255, 1, 189, 178);
-    Color disableColor = const Color.fromARGB(255, 255, 255, 255);
+    Color disableColor = Theme.of(context).colorScheme.surface;
 
     return Scaffold(
       body: Column(
@@ -41,7 +43,7 @@ class _ProjectTaskState extends State<ProjectTask> {
                     ),
                     child: Text(
                       "Projects",
-                      style: Fonts.google_fonts,
+                      style: Fonts.google_fonts(context),
                     ),
                   ),
                 ),
@@ -60,7 +62,7 @@ class _ProjectTaskState extends State<ProjectTask> {
                     ),
                     child: Text(
                       "Tasks",
-                      style: Fonts.google_fonts,
+                      style: Fonts.google_fonts(context),
                     ),
                   ),
                 ),

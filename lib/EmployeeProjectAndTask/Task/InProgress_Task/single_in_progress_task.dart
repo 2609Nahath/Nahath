@@ -1,7 +1,7 @@
 import 'package:emp_management_system/Colors_Fonts/tileColour/tileColours.dart';
 import 'package:emp_management_system/EmployeeProjectAndTask/Task/InProgress_Task/add_checkpoint.dart';
 import 'package:emp_management_system/EmployeeProjectAndTask/Task/InProgress_Task/single_checkpoint.dart';
-import 'package:emp_management_system/EmployeeProjectAndTask/drawer_button.dart';
+import 'package:emp_management_system/Dashboard/drawer_button.dart';
 import 'package:emp_management_system/Strings/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
@@ -61,7 +61,7 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                           child: Align(
                             alignment: Alignment.center,
                             child: Text(widget.title,
-                                style: Fonts.google_fonts_bold_big),
+                                style: Fonts.google_fonts_bold_big(context)),
                           ),
                         ),
                         Padding(
@@ -69,7 +69,7 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                           child: Align(
                             alignment: Alignment.center,
                             child: Text("Due date: ${widget.description}",
-                                style: Fonts.smallFonts),
+                                style: Fonts.smallFonts(context)),
                           ),
                         ),
                         ClipRRect(
@@ -96,7 +96,8 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                               child: Text(
                                                 "About the project",
                                                 style:
-                                                    Fonts.google_fonts_bold_big,
+                                                    Fonts.google_fonts_bold_big(
+                                                        context),
                                                 textAlign: TextAlign.justify,
                                               ),
                                             ),
@@ -108,7 +109,7 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                               alignment: Alignment.topLeft,
                                               child: Text(
                                                 stringWords.taskDesc,
-                                                style: Fonts.bodyFonts,
+                                                style: Fonts.bodyFonts(context),
                                                 textAlign: TextAlign.justify,
                                               ),
                                             ),
@@ -149,7 +150,8 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                               child: Text(
                                                 "Progress Tracker",
                                                 style:
-                                                    Fonts.google_fonts_bold_big,
+                                                    Fonts.google_fonts_bold_big(
+                                                        context),
                                                 textAlign: TextAlign.justify,
                                               ),
                                             ),
@@ -188,7 +190,8 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                                   },
                                                   child: Text(
                                                     "Add checkpoint",
-                                                    style: Fonts.bodyFonts,
+                                                    style: Fonts.bodyFonts(
+                                                        context),
                                                   ),
                                                   style:
                                                       ElevatedButton.styleFrom(
@@ -221,7 +224,8 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                               child: Text(
                                                 "Remark",
                                                 style:
-                                                    Fonts.google_fonts_bold_big,
+                                                    Fonts.google_fonts_bold_big(
+                                                        context),
                                               ),
                                             ),
                                           ),
@@ -242,7 +246,8 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                                           hintText:
                                                               "Leave a remark...",
                                                           hintStyle:
-                                                              Fonts.bodyFonts,
+                                                              Fonts.bodyFonts(
+                                                                  context),
                                                           contentPadding:
                                                               const EdgeInsets
                                                                   .all(15),
@@ -259,7 +264,7 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                     onPressed: () => {Navigator.pop(context)},
                                     child: Text(
                                       "Submit",
-                                      style: Fonts.bodyFonts,
+                                      style: Fonts.bodyFonts(context),
                                     ),
                                   ),
                                 )
@@ -291,8 +296,8 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
         child: Text(
           text,
           style: isActive
-              ? Fonts.google_fonts_small_white
-              : Fonts.google_fonts_small,
+              ? Fonts.google_fonts_small_white(context)
+              : Fonts.google_fonts_small(context),
           textAlign: TextAlign.center,
         ),
       ),

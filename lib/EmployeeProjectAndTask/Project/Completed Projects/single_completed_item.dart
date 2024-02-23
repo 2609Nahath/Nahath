@@ -1,5 +1,5 @@
 import 'package:emp_management_system/EmployeeProjectAndTask/Project/Completed%20Projects/show_project_task_completed.dart';
-import 'package:emp_management_system/EmployeeProjectAndTask/drawer_button.dart';
+import 'package:emp_management_system/Dashboard/drawer_button.dart';
 import 'package:flutter/material.dart';
 import 'package:emp_management_system/Colors_Fonts/tileColour/tileColours.dart';
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
@@ -76,7 +76,8 @@ class _SingleCompletedItemState extends State<SingleCompletedItem> {
                       padding: const EdgeInsets.fromLTRB(25, 0, 10, 15),
                       child: Align(
                         alignment: Alignment.center,
-                        child: Text(widget.title, style: Fonts.google_fonts),
+                        child: Text(widget.title,
+                            style: Fonts.google_fonts(context)),
                       ),
                     ),
                     Padding(
@@ -84,7 +85,7 @@ class _SingleCompletedItemState extends State<SingleCompletedItem> {
                       child: Align(
                         alignment: Alignment.center,
                         child: Text("Due date: ${widget.description}",
-                            style: Fonts.smallFonts),
+                            style: Fonts.smallFonts(context)),
                       ),
                     ),
                     ClipRRect(
@@ -132,7 +133,8 @@ class _SingleCompletedItemState extends State<SingleCompletedItem> {
                       padding: const EdgeInsets.fromLTRB(35, 20, 0, 20),
                       child: Align(
                         alignment: Alignment.topLeft,
-                        child: Text("Team Members", style: Fonts.google_fonts),
+                        child: Text("Team Members",
+                            style: Fonts.google_fonts(context)),
                       ),
                     ),
                     GridView.count(
@@ -176,8 +178,8 @@ class _SingleCompletedItemState extends State<SingleCompletedItem> {
         child: Text(
           text,
           style: isActive
-              ? Fonts.google_fonts_small_white
-              : Fonts.google_fonts_small,
+              ? Fonts.google_fonts_small_white(context)
+              : Fonts.google_fonts_small(context),
           textAlign: TextAlign.center,
         ),
       ),

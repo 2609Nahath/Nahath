@@ -36,7 +36,7 @@ class _ProjectsInfoState extends State<ProjectsInfo> {
                   alignment: Alignment.topLeft,
                   child: Text(
                     "Start Date: ${widget.startDate}",
-                    style: Fonts.bodyFonts,
+                    style: Fonts.bodyFonts(context),
                   ),
                 )),
             Padding(
@@ -45,7 +45,7 @@ class _ProjectsInfoState extends State<ProjectsInfo> {
                   alignment: Alignment.topLeft,
                   child: Text(
                     "Description: ${widget.description}",
-                    style: Fonts.bodyFonts,
+                    style: Fonts.bodyFonts(context),
                   ),
                 )),
           ],

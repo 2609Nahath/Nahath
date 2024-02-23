@@ -29,11 +29,11 @@ class TaskBody {
             children: [
               Container(
                 padding: const EdgeInsets.all(20),
-                child: Text("In Progress", style: Fonts.boldFonts),
+                child: Text("In Progress", style: Fonts.boldFonts(context)),
               ),
               Container(
                 padding: const EdgeInsets.all(20),
-                child: Text("View all", style: Fonts.smallFonts),
+                child: Text("View all", style: Fonts.smallFonts(context)),
               ),
             ],
           ),
@@ -52,12 +52,12 @@ class TaskBody {
               Container(
                 alignment: Alignment.topLeft,
                 padding: const EdgeInsets.all(20),
-                child: Text("Completed", style: Fonts.boldFonts),
+                child: Text("Completed", style: Fonts.boldFonts(context)),
               ),
               Container(
                 alignment: Alignment.topRight,
                 padding: const EdgeInsets.all(20),
-                child: Text("View all", style: Fonts.smallFonts),
+                child: Text("View all", style: Fonts.smallFonts(context)),
               ),
             ],
           ),

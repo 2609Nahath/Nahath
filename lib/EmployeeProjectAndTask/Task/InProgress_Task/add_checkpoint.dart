@@ -47,7 +47,7 @@ class AddCheckpoint {
                               selectedDate != null
                                   ? "${selectedDate!.day.toString().padLeft(2, '0')}/${selectedDate!.month.toString().padLeft(2, '0')}/${selectedDate!.year}"
                                   : "Select a date",
-                              style: Fonts.smallFonts,
+                              style: Fonts.smallFonts(context),
                             ),
                           ],
                         ),
@@ -66,7 +66,7 @@ class AddCheckpoint {
                             maxLines: 1,
                             decoration: InputDecoration(
                               hintText: "Checkpoint name...",
-                              hintStyle: Fonts.hintFonts,
+                              hintStyle: Fonts.hintFonts(context),
                               contentPadding: const EdgeInsets.all(15),
                             ),
                           ),
@@ -83,7 +83,8 @@ class AddCheckpoint {
                         backgroundColor: MaterialStateProperty.all<Color>(
                             const Color.fromARGB(255, 1, 189, 178)),
                       ),
-                      child: Text("Add Checkpoint", style: Fonts.bodyFonts),
+                      child: Text("Add Checkpoint",
+                          style: Fonts.bodyFonts(context)),
                     ),
                   )
                 ],

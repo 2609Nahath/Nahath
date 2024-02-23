@@ -15,7 +15,7 @@ class ChatInput extends StatelessWidget {
               decoration: InputDecoration(
                   hintText: "Type your message...",
                   border: const OutlineInputBorder(),
-                  hintStyle: Fonts.bodyFonts),
+                  hintStyle: Fonts.bodyFonts(context)),
             ),
           ),
           const SizedBox(width: 10),
