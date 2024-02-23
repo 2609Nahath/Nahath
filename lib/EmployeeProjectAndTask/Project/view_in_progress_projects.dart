@@ -36,7 +36,7 @@ class _ViewInProgressProjectsState extends State<ViewInProgressProjects> {
     return Scaffold(
         backgroundColor: Colors.white,
         endDrawer: HamburgerButton.buildDrawer(context),
-        appBar: HomeAppBar().appBar(context)(context),
+        appBar: HomeAppBar().appBar(context),
         body: Scrollbar(
           child: ListView(
             children: [

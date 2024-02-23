@@ -21,7 +21,7 @@ class _FAQState extends State<FAQ> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: HomeAppBar().appBar,
+        appBar: HomeAppBar().appBar(context),
         endDrawer: HamburgerButton.buildDrawer(context),
         backgroundColor: Colors.white,
         body: Scrollbar(

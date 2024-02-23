@@ -35,7 +35,7 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: HomeAppBar().appBar,
+      appBar: HomeAppBar().appBar(context),
       backgroundColor: Colors.white,
       endDrawer: HamburgerButton.buildDrawer(context),
       body: Padding(

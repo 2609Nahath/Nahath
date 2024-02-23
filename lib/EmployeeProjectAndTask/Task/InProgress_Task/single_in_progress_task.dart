@@ -44,7 +44,7 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
   Widget build(BuildContext context) {
     StringWords stringWords = StringWords();
     return Scaffold(
-        appBar: HomeAppBar().appBar(context)(context),
+        appBar: HomeAppBar().appBar(context),
         endDrawer: HamburgerButton.buildDrawer(context),
         body: Scrollbar(
           child: ListView(
