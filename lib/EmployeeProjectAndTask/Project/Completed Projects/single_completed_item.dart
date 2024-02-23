@@ -61,7 +61,7 @@ class _SingleCompletedItemState extends State<SingleCompletedItem> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: homeAppBar.appBar,
+      appBar: HomeAppBar().appBar(context)(context),
       endDrawer: HamburgerButton.buildDrawer(context),
       body: ListView(
         children: [

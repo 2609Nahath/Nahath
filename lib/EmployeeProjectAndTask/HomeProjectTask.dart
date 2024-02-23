@@ -19,7 +19,7 @@ class _HomeProjectTaskState extends State<HomeProjectTask> {
     return Scaffold(
       backgroundColor: Colors.white,
       endDrawer: HamburgerButton.buildDrawer(context),
-      appBar: homeAppBar.appBar,
+      appBar: HomeAppBar().appBar(context),
       body: const ProjectTask(),
     );
   }
