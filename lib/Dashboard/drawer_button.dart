@@ -2,14 +2,13 @@
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
 import 'package:emp_management_system/Dashboard/FAQ/faq.dart';
 import 'package:emp_management_system/Dashboard/Settings/settings.dart';
-import 'package:emp_management_system/Themes/dark_theme.dart';
 import 'package:flutter/material.dart';
 
 class HamburgerButton {
   // Hamburger.dart
   static Drawer buildDrawer(BuildContext context) {
     return Drawer(
-      backgroundColor: DarkTheme().darkTheme.colorScheme.tertiary,
+      backgroundColor: Theme.of(context).colorScheme.tertiary,
       child: ListView(
         padding: EdgeInsets.zero,
         children: [

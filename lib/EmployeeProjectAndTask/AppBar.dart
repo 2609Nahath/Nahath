@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 class HomeAppBar {
   AppBar appBar(BuildContext context) {
     return AppBar(
-      backgroundColor: DarkTheme().darkTheme.colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.background,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment:
@@ -38,7 +38,7 @@ class HomeAppBar {
         ],
       ),
       iconTheme: IconThemeData(
-        color: DarkTheme().darkTheme.colorScheme.secondary,
+        color: Theme.of(context).colorScheme.secondary,
       ),
       centerTitle: false, // Set to false to allow manual centering
       elevation: 0,

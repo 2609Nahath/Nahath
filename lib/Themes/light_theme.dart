@@ -7,6 +7,7 @@ class LightTheme {
       background: Colors.white,
       primary: Colors.grey[900]!,
       secondary: Colors.black,
+      tertiary: Colors.white,
       // tertiary: Colors.grey[900]!, // Define your tertiary color here
       // surface: Colors.grey[600]!,
       // onBackground: Colors.white,
