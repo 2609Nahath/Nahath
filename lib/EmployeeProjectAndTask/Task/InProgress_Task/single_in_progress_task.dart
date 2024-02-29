@@ -76,14 +76,16 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                           borderRadius: const BorderRadius.vertical(
                               top: Radius.circular(25)),
                           child: Container(
-                            color: const Color.fromARGB(255, 1, 189, 178),
+                            color: Theme.of(context).colorScheme.onSecondary,
                             padding: EdgeInsets.all(25),
                             child: Column(
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(25),
                                   child: Container(
-                                    color: MainColors.offWhiteWithOpacity,
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onErrorContainer,
                                     child: Padding(
                                       padding: const EdgeInsets.only(
                                           bottom: 10, right: 20, left: 20),
@@ -125,7 +127,9 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(25),
                                   child: Container(
-                                    color: MainColors.offWhiteWithOpacity,
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onErrorContainer,
                                     child: Padding(
                                       padding: const EdgeInsets.only(
                                           bottom: 10, right: 20, left: 20),
@@ -195,9 +199,10 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                                   ),
                                                   style:
                                                       ElevatedButton.styleFrom(
-                                                          backgroundColor:
-                                                              MainColors
-                                                                  .offWhite),
+                                                          backgroundColor: Theme
+                                                                  .of(context)
+                                                              .colorScheme
+                                                              .outlineVariant),
                                                 ),
                                               )
                                             ],
@@ -213,7 +218,9 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                   borderRadius: BorderRadius.circular(25),
                                   child: Container(
                                       padding: EdgeInsets.all(25),
-                                      color: MainColors.offWhiteWithOpacity,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onErrorContainer,
                                       child: Column(
                                         children: [
                                           Padding(
@@ -237,8 +244,9 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                                 child: Align(
                                                     alignment: Alignment.center,
                                                     child: Container(
-                                                      color:
-                                                          MainColors.offWhite,
+                                                      color: Theme.of(context)
+                                                          .colorScheme
+                                                          .onErrorContainer,
                                                       child: TextField(
                                                         maxLines: 6,
                                                         decoration:
@@ -266,6 +274,10 @@ class _SingleInProcessTask_ItemState extends State<SingleInProcessTask_Item> {
                                       "Submit",
                                       style: Fonts.bodyFonts(context),
                                     ),
+                                    style: ElevatedButton.styleFrom(
+                                        backgroundColor: Theme.of(context)
+                                            .colorScheme
+                                            .outlineVariant),
                                   ),
                                 )
                               ],

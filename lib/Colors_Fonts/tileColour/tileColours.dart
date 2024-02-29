@@ -13,4 +13,9 @@ class tileColour {
     Color.fromARGB(197, 141, 243, 243),
     Color.fromARGB(197, 160, 238, 225),
   ];
+  static List<Color> checkpointItemsColorsDark = [
+    Color.fromARGB(111, 189, 247, 244),
+    Color.fromARGB(111, 141, 243, 243),
+    Color.fromARGB(115, 160, 238, 225),
+  ];
 }

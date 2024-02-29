@@ -2,7 +2,9 @@ import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
 import 'package:emp_management_system/Colors_Fonts/mainColors/mainColors.dart';
 import 'package:emp_management_system/EmployeeProjectAndTask/AppBar.dart';
 import 'package:emp_management_system/Dashboard/drawer_button.dart';
+import 'package:emp_management_system/Themes/notifier.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
@@ -16,12 +18,8 @@ class _SettingsState extends State<Settings> {
   String selectedLanguage = 'English'; // Default language
 
   void _toggleDarkMode(bool value) {
-    setState(() {
-      backgroundColor =
-          value ? Color.fromARGB(255, 117, 155, 152) : MainColors.mainColor;
-    });
-    // Implement logic to apply dark mode throughout the app
-    // You may use a theme provider or set the theme globally
+    final themeNotifier = Provider.of<ThemeNotifier>(context, listen: false);
+    themeNotifier.toggleDarkMode(value);
   }
 
   void _changeLanguage(String language) {
@@ -34,9 +32,11 @@ class _SettingsState extends State<Settings> {
 
   @override
   Widget build(BuildContext context) {
+    final themeNotifier = Provider.of<ThemeNotifier>(context);
+
     return Scaffold(
       appBar: HomeAppBar().appBar(context),
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).colorScheme.background,
       endDrawer: HamburgerButton.buildDrawer(context),
       body: Padding(
         padding: const EdgeInsets.only(top: 50),
@@ -53,58 +53,61 @@ class _SettingsState extends State<Settings> {
             Expanded(
               child: ClipRRect(
                 borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(25),
-                    topRight: Radius.circular(25)),
+                  topLeft: Radius.circular(25),
+                  topRight: Radius.circular(25),
+                ),
                 child: Container(
                   color: backgroundColor,
-                  child: Column(children: [
-                    Padding(
-                      padding: EdgeInsets.only(top: 10),
-                      child: ListTile(
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(top: 10),
+                        child: ListTile(
+                          title: Text(
+                            'Change Language',
+                            style: Fonts.bodyFonts(context),
+                          ),
+                          trailing: DropdownButton<String>(
+                            value: selectedLanguage,
+                            onChanged: (String? newValue) {
+                              _changeLanguage(newValue!);
+                            },
+                            items: <String>[
+                              'English',
+                              'Spanish',
+                              'French',
+                              'German'
+                            ].map<DropdownMenuItem<String>>(
+                              (String value) {
+                                return DropdownMenuItem<String>(
+                                  value: value,
+                                  child: Text(
+                                    value,
+                                    style: Fonts.bodyFonts(context),
+                                  ),
+                                );
+                              },
+                            ).toList(),
+                          ),
+                        ),
+                      ),
+                      const Divider(),
+                      ListTile(
                         title: Text(
-                          'Change Language',
+                          'Dark Mode',
                           style: Fonts.bodyFonts(context),
                         ),
-                        trailing: DropdownButton<String>(
-                          value: selectedLanguage,
-                          onChanged: (String? newValue) {
-                            _changeLanguage(newValue!);
-                          },
-                          items: <String>[
-                            'English',
-                            'Spanish',
-                            'French',
-                            'German'
-                          ].map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(
-                                value,
-                                style: Fonts.bodyFonts(context),
-                              ),
-                            );
-                          }).toList(),
+                        trailing: Switch(
+                          value: themeNotifier.isDarkMode,
+                          onChanged: _toggleDarkMode,
+                          activeColor: Colors.green,
                         ),
                       ),
-                    ),
-                    const Divider(),
-                    ListTile(
-                      title: Text(
-                        'Dark Mode',
-                        style: Fonts.bodyFonts(context),
-                      ),
-                      trailing: Switch(
-                        value: backgroundColor ==
-                            Color.fromARGB(255, 117, 155, 152),
-                        onChanged: _toggleDarkMode,
-                        activeColor: Colors.green,
-                      ),
-                    ),
-                  ]),
+                    ],
+                  ),
                 ),
               ),
-            )
-            // Add more settings as needed
+            ),
           ],
         ),
       ),

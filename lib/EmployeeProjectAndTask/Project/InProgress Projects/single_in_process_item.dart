@@ -169,8 +169,10 @@ class _SingleInProcessItemState extends State<SingleInProcessItem> {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: isActive
-            ? MainColors.firstColor
-            : MainColors.offWhite, // Change to your desired color
+            ? Theme.of(context).colorScheme.onPrimary
+            : Theme.of(context)
+                .colorScheme
+                .onSecondary, // Change to your desired color
       ),
       onPressed: onPressed,
       child: Container(

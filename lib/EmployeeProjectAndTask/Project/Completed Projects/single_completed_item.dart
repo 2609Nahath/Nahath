@@ -102,15 +102,18 @@ class _SingleCompletedItemState extends State<SingleCompletedItem> {
                                 buildElevatedButton(
                                     "Tasks",
                                     () => _toggleBody(true, false, false),
-                                    _showProjectBody),
+                                    _showProjectBody,
+                                    context),
                                 buildElevatedButton(
                                     "Meetings",
                                     () => _toggleBody(false, true, false),
-                                    _showMeetingBody),
+                                    _showMeetingBody,
+                                    context),
                                 buildElevatedButton(
                                     "Materials",
                                     () => _toggleBody(false, false, true),
-                                    _showMaterialBody),
+                                    _showMaterialBody,
+                                    context),
                               ],
                             ),
                             Column(
@@ -164,13 +167,15 @@ class _SingleCompletedItemState extends State<SingleCompletedItem> {
     );
   }
 
-  ElevatedButton buildElevatedButton(
-      String text, VoidCallback onPressed, bool isActive) {
+  ElevatedButton buildElevatedButton(String text, VoidCallback onPressed,
+      bool isActive, BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: isActive
-            ? MainColors.firstColor
-            : MainColors.offWhite, // Change to your desired color
+            ? Theme.of(context).colorScheme.onPrimary
+            : Theme.of(context)
+                .colorScheme
+                .onSecondary, // Change to your desired color
       ),
       onPressed: onPressed,
       child: Container(

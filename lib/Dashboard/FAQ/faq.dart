@@ -23,7 +23,7 @@ class _FAQState extends State<FAQ> {
     return Scaffold(
         appBar: HomeAppBar().appBar(context),
         endDrawer: HamburgerButton.buildDrawer(context),
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).colorScheme.background,
         body: Scrollbar(
           controller: _scrollController,
           child: ListView(
