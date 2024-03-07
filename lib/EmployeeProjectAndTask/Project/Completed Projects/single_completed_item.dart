@@ -92,7 +92,7 @@ class _SingleCompletedItemState extends State<SingleCompletedItem> {
                       borderRadius:
                           const BorderRadius.vertical(top: Radius.circular(25)),
                       child: Container(
-                        color: const Color.fromARGB(255, 1, 189, 178),
+                        color: Theme.of(context).colorScheme.onSecondary,
                         padding: EdgeInsets.all(25),
                         child: Column(
                           children: [

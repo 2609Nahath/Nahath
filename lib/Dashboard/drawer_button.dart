@@ -15,8 +15,8 @@ class HamburgerButton {
           SizedBox(
             height: 200,
             child: DrawerHeader(
-                decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 1, 189, 178),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.onSecondary,
                 ),
                 child: Align(
                   alignment: Alignment.center,

@@ -19,7 +19,7 @@ class _ProjectTaskState extends State<ProjectTask> {
 
   @override
   Widget build(BuildContext context) {
-    Color enableColor = Color.fromARGB(255, 1, 189, 178);
+    Color enableColor = Theme.of(context).colorScheme.onSecondary;
     Color disableColor = Theme.of(context).colorScheme.surface;
 
     return Scaffold(

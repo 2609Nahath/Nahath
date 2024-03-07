@@ -1,3 +1,4 @@
+import 'package:emp_management_system/Calender/datePick.dart';
 import 'package:emp_management_system/Colors_Fonts/Fonts/font.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -65,7 +66,7 @@ class AddTask {
                   Align(
                     alignment: Alignment.topRight,
                     child: IconButton(
-                      onPressed: () => {}, // Refer step 3
+                      onPressed: () => DateSelect().selectDate(context),
                       icon: const Icon(Icons.calendar_month_outlined),
                     ),
                   )

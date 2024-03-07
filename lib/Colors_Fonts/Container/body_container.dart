@@ -12,7 +12,7 @@ class Body_Container extends StatelessWidget {
       borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(25), topRight: Radius.circular(25)),
       child: Container(
-        color: MainColors.mainColor,
+        color: Theme.of(context).colorScheme.onSecondary,
         child: child,
       ),
     );

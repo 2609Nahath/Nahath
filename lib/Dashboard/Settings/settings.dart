@@ -57,7 +57,7 @@ class _SettingsState extends State<Settings> {
                   topRight: Radius.circular(25),
                 ),
                 child: Container(
-                  color: backgroundColor,
+                  color: Theme.of(context).colorScheme.onSecondary,
                   child: Column(
                     children: [
                       Padding(
